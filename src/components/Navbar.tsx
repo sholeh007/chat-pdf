@@ -1,5 +1,6 @@
 import Link from "next/link"
 import MaxWidthWrapper from "./MaxWidthWrapper"
+import { buttonVariants } from "./ui/button"
 
 export default function Navbar() {
   return (
@@ -8,6 +9,9 @@ export default function Navbar() {
         <div className='flex items-center justify-between h-14 border-b border-zinc-200'>
           <Link href='/' className='flex font-semibold'>
             <span>CPdf</span>
+          </Link>
+          <Link href='/dashboard' className={buttonVariants({ size: "sm" })}>
+            Get Started
           </Link>
         </div>
       </MaxWidthWrapper>
