@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar"
 import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
@@ -12,8 +13,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang='en' className='scroll-smooth'>
       <body className={cn("min-h-screen antialiased grainy", roboto.className)}>
+        <Navbar />
         {children}
       </body>
     </html>
